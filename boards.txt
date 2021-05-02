@@ -110,6 +110,104 @@ Lacuna-LS200.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
 
 
 
+# RFThings Design KIT
+# ---------------------------------------
+RFThings-DK.name=RFThings-DK
+RFThings-DK.vid.0=0x1209
+RFThings-DK.pid.0=0x6667
+
+RFThings-DK.upload.tool=stm32l4_dfu
+RFThings-DK.upload.protocol=dfu
+RFThings-DK.upload.maximum_size=1032192
+RFThings-DK.upload.use_1200bps_touch=true
+RFThings-DK.upload.wait_for_upload_port=false
+RFThings-DK.upload.native_usb=false
+
+RFThings-DK.build.mcu=cortex-m4
+RFThings-DK.build.f_cpu=80000000L
+RFThings-DK.build.board=STM32L4_DK
+RFThings-DK.build.arch=STM32L4
+RFThings-DK.build.core=stm32l4
+RFThings-DK.build.vid=0x1209
+RFThings-DK.build.pid=0x6667
+RFThings-DK.build.did=0xffff
+RFThings-DK.build.usb_manufacturer="RFThings"
+RFThings-DK.build.usb_product="DK Platinum"
+RFThings-DK.build.extra_flags=-DSTM32L476xx -D__FPU_PRESENT=1 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mabi=aapcs -mslow-flash-data -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags} {build.region_flags} {build.version_flags}
+RFThings-DK.build.ldscript=linker_scripts/STM32L476RE_FLASH.ld
+RFThings-DK.build.openocdscript=openocd_scripts/stm32l476re_dragonfly.cfg
+RFThings-DK.build.variant=STM32L476RE-DK
+RFThings-DK.build.variant_system_libs="-L{runtime.platform.path}/system/STM32L4xx/Lib" "-L{runtime.platform.path}/system/CMSIS/Lib" -lstm32l476 -larm_cortexM4lf_math
+RFThings-DK.build.variant_system_include="-I{runtime.platform.path}/system/CMSIS/Include" "-I{runtime.platform.path}/system/CMSIS/Device/ST/STM32L4xx/Include" "-I{runtime.platform.path}/system/STM32L4xx/Include" 
+
+RFThings-DK.menu.usb.cdc=Serial
+RFThings-DK.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
+# RFThings-DK.menu.usb.cdc_msc=Serial + Mass Storage
+# RFThings-DK.menu.usb.cdc_msc.build.usb_type=USB_TYPE_CDC_MSC
+# RFThings-DK.menu.usb.cdc_hid=Serial + Keyboard + Mouse
+# RFThings-DK.menu.usb.cdc_hid.build.usb_type=USB_TYPE_CDC_HID
+# RFThings-DK.menu.usb.cdc_msc_hid=Serial + Mass Storage + Keyboard + Mouse
+# RFThings-DK.menu.usb.cdc_msc_hid.build.usb_type=USB_TYPE_CDC_MSC_HID
+RFThings-DK.menu.usb.none=No USB (low-power)
+RFThings-DK.menu.usb.none.build.usb_type=USB_TYPE_NONE
+
+RFThings-DK.menu.region_flags.EU868=Europe 868
+RFThings-DK.menu.region_flags.EU868.build.region=R_EU868
+RFThings-DK.menu.region_flags.US915=US 915
+RFThings-DK.menu.region_flags.US915.build.region=R_US915
+RFThings-DK.menu.region_flags.AU915=AU 915
+RFThings-DK.menu.region_flags.AU915.build.region=R_AU915
+RFThings-DK.menu.region_flags.AS923=Asia AS923
+RFThings-DK.menu.region_flags.AS923.build.region=R_AS923
+RFThings-DK.menu.region_flags.IN865=India 865
+RFThings-DK.menu.region_flags.IN865.build.region=R_IN865
+
+RFThings-DK.menu.version_flags.V3=V3
+RFThings-DK.menu.version_flags.V3.build.version=BOARD_LS200_V3
+RFThings-DK.menu.version_flags.V2=V2
+RFThings-DK.menu.version_flags.V2.build.version=BOARD_LS200_V2
+
+RFThings-DK.build.dosfs_sdcard=0
+RFThings-DK.build.dosfs_sflash=0
+
+RFThings-DK.menu.speed.80=80 MHz
+RFThings-DK.menu.speed.80.build.f_cpu=80000000L
+RFThings-DK.menu.speed.72=72 MHz
+RFThings-DK.menu.speed.72.build.f_cpu=72000000L
+RFThings-DK.menu.speed.64=64 MHz
+RFThings-DK.menu.speed.64.build.f_cpu=64000000L
+RFThings-DK.menu.speed.48=48 MHz
+RFThings-DK.menu.speed.48.build.f_cpu=48000000L
+RFThings-DK.menu.speed.32=32 MHz
+RFThings-DK.menu.speed.32.build.f_cpu=32000000L
+RFThings-DK.menu.speed.24=24 MHz
+RFThings-DK.menu.speed.24.build.f_cpu=24000000L
+RFThings-DK.menu.speed.16=16 MHz
+RFThings-DK.menu.speed.16.build.f_cpu=16000000L
+RFThings-DK.menu.speed.8=8 MHz (No USB)
+RFThings-DK.menu.speed.8.build.f_cpu=8000000L
+RFThings-DK.menu.speed.4=4 MHz (No USB)
+RFThings-DK.menu.speed.4.build.f_cpu=4000000L
+RFThings-DK.menu.speed.2=2 MHz (No USB)
+RFThings-DK.menu.speed.2.build.f_cpu=2000000L
+RFThings-DK.menu.speed.1=1 MHz (No USB)
+RFThings-DK.menu.speed.1.build.f_cpu=1000000L
+
+RFThings-DK.menu.opt.o3=Fastest
+RFThings-DK.menu.opt.o3.build.flags.optimize=-O3
+RFThings-DK.menu.opt.o3.build.flags.ldspecs=
+RFThings-DK.menu.opt.os=Smallest Code
+RFThings-DK.menu.opt.os.build.flags.optimize=-Os
+RFThings-DK.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
+# RFThings-DK.menu.opt.o1=Fast
+# RFThings-DK.menu.opt.o1.build.flags.optimize=-O1
+# RFThings-DK.menu.opt.o1.build.flags.ldspecs=
+# RFThings-DK.menu.opt.o2=Faster
+# RFThings-DK.menu.opt.o2.build.flags.optimize=-O2
+# RFThings-DK.menu.opt.o2.build.flags.ldspecs=
+
+
+
 # Tlera Dragonfly
 # ---------------------------------------
 Dragonfly-L476RE.name=Dragonfly-L476RE
