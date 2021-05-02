@@ -7,101 +7,199 @@ menu.opt=Optimize
 
 
 
-# RFThings Design KIT
+# RFThings Design KIT Platinum
 # ---------------------------------------
-RFThings-DK.name=RFThings-DK
-RFThings-DK.vid.0=0x1209
-RFThings-DK.pid.0=0x6667
+RFThings-DKPlatinum.name=RFThings-DKPlatinum
+RFThings-DKPlatinum.vid.0=0x1209
+RFThings-DKPlatinum.pid.0=0x6667
 
-RFThings-DK.upload.tool=stm32l4_dfu
-RFThings-DK.upload.protocol=dfu
-RFThings-DK.upload.maximum_size=1032192
-RFThings-DK.upload.use_1200bps_touch=true
-RFThings-DK.upload.wait_for_upload_port=false
-RFThings-DK.upload.native_usb=false
+RFThings-DKPlatinum.upload.tool=stm32l4_dfu
+RFThings-DKPlatinum.upload.protocol=dfu
+RFThings-DKPlatinum.upload.maximum_size=1032192
+RFThings-DKPlatinum.upload.use_1200bps_touch=true
+RFThings-DKPlatinum.upload.wait_for_upload_port=false
+RFThings-DKPlatinum.upload.native_usb=false
 
-RFThings-DK.build.mcu=cortex-m4
-RFThings-DK.build.f_cpu=80000000L
-RFThings-DK.build.board=STM32L4_DK
-RFThings-DK.build.arch=STM32L4
-RFThings-DK.build.core=stm32l4
-RFThings-DK.build.vid=0x1209
-RFThings-DK.build.pid=0x6667
-RFThings-DK.build.did=0xffff
-RFThings-DK.build.usb_manufacturer="RFThings"
-RFThings-DK.build.usb_product="DK Platinum"
-RFThings-DK.build.extra_flags=-DSTM32L476xx -D__FPU_PRESENT=1 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mabi=aapcs -mslow-flash-data -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags} {build.region_flags} {build.version_flags}
-RFThings-DK.build.ldscript=linker_scripts/STM32L476RE_FLASH.ld
-RFThings-DK.build.openocdscript=openocd_scripts/stm32l476re_dragonfly.cfg
-RFThings-DK.build.variant=STM32L476RE-DK
-RFThings-DK.build.variant_system_libs="-L{runtime.platform.path}/system/STM32L4xx/Lib" "-L{runtime.platform.path}/system/CMSIS/Lib" -lstm32l476 -larm_cortexM4lf_math
-RFThings-DK.build.variant_system_include="-I{runtime.platform.path}/system/CMSIS/Include" "-I{runtime.platform.path}/system/CMSIS/Device/ST/STM32L4xx/Include" "-I{runtime.platform.path}/system/STM32L4xx/Include" 
+RFThings-DKPlatinum.build.mcu=cortex-m4
+RFThings-DKPlatinum.build.f_cpu=80000000L
+RFThings-DKPlatinum.build.board=STM32L4_DK
+RFThings-DKPlatinum.build.arch=STM32L4
+RFThings-DKPlatinum.build.core=stm32l4
+RFThings-DKPlatinum.build.vid=0x1209
+RFThings-DKPlatinum.build.pid=0x6667
+RFThings-DKPlatinum.build.did=0xffff
+RFThings-DKPlatinum.build.usb_manufacturer="RFThings"
+RFThings-DKPlatinum.build.usb_product="DK Platinum"
+RFThings-DKPlatinum.build.extra_flags=-DSTM32L476xx -D__FPU_PRESENT=1 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mabi=aapcs -mslow-flash-data -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags} {build.region_flags} {build.version_flags}
+RFThings-DKPlatinum.build.ldscript=linker_scripts/STM32L476RE_FLASH.ld
+RFThings-DKPlatinum.build.openocdscript=openocd_scripts/stm32l476re_dragonfly.cfg
+RFThings-DKPlatinum.build.variant=STM32L476RE-DKPlatinum
+RFThings-DKPlatinum.build.variant_system_libs="-L{runtime.platform.path}/system/STM32L4xx/Lib" "-L{runtime.platform.path}/system/CMSIS/Lib" -lstm32l476 -larm_cortexM4lf_math
+RFThings-DKPlatinum.build.variant_system_include="-I{runtime.platform.path}/system/CMSIS/Include" "-I{runtime.platform.path}/system/CMSIS/Device/ST/STM32L4xx/Include" "-I{runtime.platform.path}/system/STM32L4xx/Include" 
 
-RFThings-DK.menu.usb.cdc=Serial
-RFThings-DK.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
-# RFThings-DK.menu.usb.cdc_msc=Serial + Mass Storage
-# RFThings-DK.menu.usb.cdc_msc.build.usb_type=USB_TYPE_CDC_MSC
-# RFThings-DK.menu.usb.cdc_hid=Serial + Keyboard + Mouse
-# RFThings-DK.menu.usb.cdc_hid.build.usb_type=USB_TYPE_CDC_HID
-# RFThings-DK.menu.usb.cdc_msc_hid=Serial + Mass Storage + Keyboard + Mouse
-# RFThings-DK.menu.usb.cdc_msc_hid.build.usb_type=USB_TYPE_CDC_MSC_HID
-RFThings-DK.menu.usb.none=No USB (low-power)
-RFThings-DK.menu.usb.none.build.usb_type=USB_TYPE_NONE
+RFThings-DKPlatinum.menu.usb.cdc=Serial
+RFThings-DKPlatinum.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
+# RFThings-DKPlatinum.menu.usb.cdc_msc=Serial + Mass Storage
+# RFThings-DKPlatinum.menu.usb.cdc_msc.build.usb_type=USB_TYPE_CDC_MSC
+# RFThings-DKPlatinum.menu.usb.cdc_hid=Serial + Keyboard + Mouse
+# RFThings-DKPlatinum.menu.usb.cdc_hid.build.usb_type=USB_TYPE_CDC_HID
+# RFThings-DKPlatinum.menu.usb.cdc_msc_hid=Serial + Mass Storage + Keyboard + Mouse
+# RFThings-DKPlatinum.menu.usb.cdc_msc_hid.build.usb_type=USB_TYPE_CDC_MSC_HID
+RFThings-DKPlatinum.menu.usb.none=No USB (low-power)
+RFThings-DKPlatinum.menu.usb.none.build.usb_type=USB_TYPE_NONE
 
-RFThings-DK.menu.region_flags.EU868=Europe 868
-RFThings-DK.menu.region_flags.EU868.build.region=R_EU868
-RFThings-DK.menu.region_flags.US915=US 915
-RFThings-DK.menu.region_flags.US915.build.region=R_US915
-RFThings-DK.menu.region_flags.AU915=AU 915
-RFThings-DK.menu.region_flags.AU915.build.region=R_AU915
-RFThings-DK.menu.region_flags.AS923=Asia AS923
-RFThings-DK.menu.region_flags.AS923.build.region=R_AS923
-RFThings-DK.menu.region_flags.IN865=India 865
-RFThings-DK.menu.region_flags.IN865.build.region=R_IN865
+RFThings-DKPlatinum.menu.region_flags.EU868=Europe 868
+RFThings-DKPlatinum.menu.region_flags.EU868.build.region=R_EU868
+RFThings-DKPlatinum.menu.region_flags.US915=US 915
+RFThings-DKPlatinum.menu.region_flags.US915.build.region=R_US915
+RFThings-DKPlatinum.menu.region_flags.AU915=AU 915
+RFThings-DKPlatinum.menu.region_flags.AU915.build.region=R_AU915
+RFThings-DKPlatinum.menu.region_flags.AS923=Asia AS923
+RFThings-DKPlatinum.menu.region_flags.AS923.build.region=R_AS923
+RFThings-DKPlatinum.menu.region_flags.IN865=India 865
+RFThings-DKPlatinum.menu.region_flags.IN865.build.region=R_IN865
 
-RFThings-DK.menu.version_flags.V3=V3
-RFThings-DK.menu.version_flags.V3.build.version=BOARD_LS200_V3
-RFThings-DK.menu.version_flags.V2=V2
-RFThings-DK.menu.version_flags.V2.build.version=BOARD_LS200_V2
+RFThings-DKPlatinum.menu.version_flags.V3=V3
+RFThings-DKPlatinum.menu.version_flags.V3.build.version=BOARD_LS200_V3
+RFThings-DKPlatinum.menu.version_flags.V2=V2
+RFThings-DKPlatinum.menu.version_flags.V2.build.version=BOARD_LS200_V2
 
-RFThings-DK.build.dosfs_sdcard=0
-RFThings-DK.build.dosfs_sflash=0
+RFThings-DKPlatinum.build.dosfs_sdcard=0
+RFThings-DKPlatinum.build.dosfs_sflash=0
 
-RFThings-DK.menu.speed.80=80 MHz
-RFThings-DK.menu.speed.80.build.f_cpu=80000000L
-RFThings-DK.menu.speed.72=72 MHz
-RFThings-DK.menu.speed.72.build.f_cpu=72000000L
-RFThings-DK.menu.speed.64=64 MHz
-RFThings-DK.menu.speed.64.build.f_cpu=64000000L
-RFThings-DK.menu.speed.48=48 MHz
-RFThings-DK.menu.speed.48.build.f_cpu=48000000L
-RFThings-DK.menu.speed.32=32 MHz
-RFThings-DK.menu.speed.32.build.f_cpu=32000000L
-RFThings-DK.menu.speed.24=24 MHz
-RFThings-DK.menu.speed.24.build.f_cpu=24000000L
-RFThings-DK.menu.speed.16=16 MHz
-RFThings-DK.menu.speed.16.build.f_cpu=16000000L
-RFThings-DK.menu.speed.8=8 MHz (No USB)
-RFThings-DK.menu.speed.8.build.f_cpu=8000000L
-RFThings-DK.menu.speed.4=4 MHz (No USB)
-RFThings-DK.menu.speed.4.build.f_cpu=4000000L
-RFThings-DK.menu.speed.2=2 MHz (No USB)
-RFThings-DK.menu.speed.2.build.f_cpu=2000000L
-RFThings-DK.menu.speed.1=1 MHz (No USB)
-RFThings-DK.menu.speed.1.build.f_cpu=1000000L
+RFThings-DKPlatinum.menu.speed.80=80 MHz
+RFThings-DKPlatinum.menu.speed.80.build.f_cpu=80000000L
+RFThings-DKPlatinum.menu.speed.72=72 MHz
+RFThings-DKPlatinum.menu.speed.72.build.f_cpu=72000000L
+RFThings-DKPlatinum.menu.speed.64=64 MHz
+RFThings-DKPlatinum.menu.speed.64.build.f_cpu=64000000L
+RFThings-DKPlatinum.menu.speed.48=48 MHz
+RFThings-DKPlatinum.menu.speed.48.build.f_cpu=48000000L
+RFThings-DKPlatinum.menu.speed.32=32 MHz
+RFThings-DKPlatinum.menu.speed.32.build.f_cpu=32000000L
+RFThings-DKPlatinum.menu.speed.24=24 MHz
+RFThings-DKPlatinum.menu.speed.24.build.f_cpu=24000000L
+RFThings-DKPlatinum.menu.speed.16=16 MHz
+RFThings-DKPlatinum.menu.speed.16.build.f_cpu=16000000L
+RFThings-DKPlatinum.menu.speed.8=8 MHz (No USB)
+RFThings-DKPlatinum.menu.speed.8.build.f_cpu=8000000L
+RFThings-DKPlatinum.menu.speed.4=4 MHz (No USB)
+RFThings-DKPlatinum.menu.speed.4.build.f_cpu=4000000L
+RFThings-DKPlatinum.menu.speed.2=2 MHz (No USB)
+RFThings-DKPlatinum.menu.speed.2.build.f_cpu=2000000L
+RFThings-DKPlatinum.menu.speed.1=1 MHz (No USB)
+RFThings-DKPlatinum.menu.speed.1.build.f_cpu=1000000L
 
-RFThings-DK.menu.opt.o3=Fastest
-RFThings-DK.menu.opt.o3.build.flags.optimize=-O3
-RFThings-DK.menu.opt.o3.build.flags.ldspecs=
-RFThings-DK.menu.opt.os=Smallest Code
-RFThings-DK.menu.opt.os.build.flags.optimize=-Os
-RFThings-DK.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
-# RFThings-DK.menu.opt.o1=Fast
-# RFThings-DK.menu.opt.o1.build.flags.optimize=-O1
-# RFThings-DK.menu.opt.o1.build.flags.ldspecs=
-# RFThings-DK.menu.opt.o2=Faster
-# RFThings-DK.menu.opt.o2.build.flags.optimize=-O2
-# RFThings-DK.menu.opt.o2.build.flags.ldspecs=
+RFThings-DKPlatinum.menu.opt.o3=Fastest
+RFThings-DKPlatinum.menu.opt.o3.build.flags.optimize=-O3
+RFThings-DKPlatinum.menu.opt.o3.build.flags.ldspecs=
+RFThings-DKPlatinum.menu.opt.os=Smallest Code
+RFThings-DKPlatinum.menu.opt.os.build.flags.optimize=-Os
+RFThings-DKPlatinum.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
+# RFThings-DKPlatinum.menu.opt.o1=Fast
+# RFThings-DKPlatinum.menu.opt.o1.build.flags.optimize=-O1
+# RFThings-DKPlatinum.menu.opt.o1.build.flags.ldspecs=
+# RFThings-DKPlatinum.menu.opt.o2=Faster
+# RFThings-DKPlatinum.menu.opt.o2.build.flags.optimize=-O2
+# RFThings-DKPlatinum.menu.opt.o2.build.flags.ldspecs=
+
+
+
+# RFThings Design KIT Blue
+# ---------------------------------------
+RFThings-DKBlue.name=RFThings-DKBlue
+RFThings-DKBlue.vid.0=0x1209
+RFThings-DKBlue.pid.0=0x6667
+
+RFThings-DKBlue.upload.tool=stm32l4_dfu
+RFThings-DKBlue.upload.protocol=dfu
+RFThings-DKBlue.upload.maximum_size=245760
+RFThings-DKBlue.upload.use_1200bps_touch=true
+RFThings-DKBlue.upload.wait_for_upload_port=false
+RFThings-DKBlue.upload.native_usb=false
+
+RFThings-DKBlue.build.mcu=cortex-m4
+RFThings-DKBlue.build.f_cpu=80000000L
+RFThings-DKBlue.build.board=STM32L4_DK
+RFThings-DKBlue.build.arch=STM32L4
+RFThings-DKBlue.build.core=stm32l4
+RFThings-DKBlue.build.vid=0x1209
+RFThings-DKBlue.build.pid=0x6667
+RFThings-DKBlue.build.did=0xffff
+RFThings-DKBlue.build.usb_manufacturer="RFThings"
+RFThings-DKBlue.build.usb_product="DK Blue"
+RFThings-DKBlue.build.extra_flags=-DSTM32L476xx -D__FPU_PRESENT=1 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mabi=aapcs -mslow-flash-data -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags} {build.region_flags} {build.version_flags}
+RFThings-DKBlue.build.ldscript=linker_scripts/STM32L476RE_FLASH.ld
+RFThings-DKBlue.build.openocdscript=openocd_scripts/stm32l476re_dragonfly.cfg
+RFThings-DKBlue.build.variant=STM32L476RE-DKBlue
+RFThings-DKBlue.build.variant_system_libs="-L{runtime.platform.path}/system/STM32L4xx/Lib" "-L{runtime.platform.path}/system/CMSIS/Lib" -lstm32l476 -larm_cortexM4lf_math
+RFThings-DKBlue.build.variant_system_include="-I{runtime.platform.path}/system/CMSIS/Include" "-I{runtime.platform.path}/system/CMSIS/Device/ST/STM32L4xx/Include" "-I{runtime.platform.path}/system/STM32L4xx/Include" 
+
+RFThings-DKBlue.menu.usb.cdc=Serial
+RFThings-DKBlue.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
+# RFThings-DKBlue.menu.usb.cdc_msc=Serial + Mass Storage
+# RFThings-DKBlue.menu.usb.cdc_msc.build.usb_type=USB_TYPE_CDC_MSC
+# RFThings-DKBlue.menu.usb.cdc_hid=Serial + Keyboard + Mouse
+# RFThings-DKBlue.menu.usb.cdc_hid.build.usb_type=USB_TYPE_CDC_HID
+# RFThings-DKBlue.menu.usb.cdc_msc_hid=Serial + Mass Storage + Keyboard + Mouse
+# RFThings-DKBlue.menu.usb.cdc_msc_hid.build.usb_type=USB_TYPE_CDC_MSC_HID
+RFThings-DKBlue.menu.usb.none=No USB (low-power)
+RFThings-DKBlue.menu.usb.none.build.usb_type=USB_TYPE_NONE
+
+RFThings-DKBlue.menu.region_flags.EU868=Europe 868
+RFThings-DKBlue.menu.region_flags.EU868.build.region=R_EU868
+RFThings-DKBlue.menu.region_flags.US915=US 915
+RFThings-DKBlue.menu.region_flags.US915.build.region=R_US915
+RFThings-DKBlue.menu.region_flags.AU915=AU 915
+RFThings-DKBlue.menu.region_flags.AU915.build.region=R_AU915
+RFThings-DKBlue.menu.region_flags.AS923=Asia AS923
+RFThings-DKBlue.menu.region_flags.AS923.build.region=R_AS923
+RFThings-DKBlue.menu.region_flags.IN865=India 865
+RFThings-DKBlue.menu.region_flags.IN865.build.region=R_IN865
+
+RFThings-DKBlue.menu.version_flags.V3=V3
+RFThings-DKBlue.menu.version_flags.V3.build.version=BOARD_LS200_V3
+RFThings-DKBlue.menu.version_flags.V2=V2
+RFThings-DKBlue.menu.version_flags.V2.build.version=BOARD_LS200_V2
+
+RFThings-DKBlue.build.dosfs_sdcard=0
+RFThings-DKBlue.build.dosfs_sflash=0
+
+RFThings-DKBlue.menu.speed.80=80 MHz
+RFThings-DKBlue.menu.speed.80.build.f_cpu=80000000L
+RFThings-DKBlue.menu.speed.72=72 MHz
+RFThings-DKBlue.menu.speed.72.build.f_cpu=72000000L
+RFThings-DKBlue.menu.speed.64=64 MHz
+RFThings-DKBlue.menu.speed.64.build.f_cpu=64000000L
+RFThings-DKBlue.menu.speed.48=48 MHz
+RFThings-DKBlue.menu.speed.48.build.f_cpu=48000000L
+RFThings-DKBlue.menu.speed.32=32 MHz
+RFThings-DKBlue.menu.speed.32.build.f_cpu=32000000L
+RFThings-DKBlue.menu.speed.24=24 MHz
+RFThings-DKBlue.menu.speed.24.build.f_cpu=24000000L
+RFThings-DKBlue.menu.speed.16=16 MHz
+RFThings-DKBlue.menu.speed.16.build.f_cpu=16000000L
+RFThings-DKBlue.menu.speed.8=8 MHz (No USB)
+RFThings-DKBlue.menu.speed.8.build.f_cpu=8000000L
+RFThings-DKBlue.menu.speed.4=4 MHz (No USB)
+RFThings-DKBlue.menu.speed.4.build.f_cpu=4000000L
+RFThings-DKBlue.menu.speed.2=2 MHz (No USB)
+RFThings-DKBlue.menu.speed.2.build.f_cpu=2000000L
+RFThings-DKBlue.menu.speed.1=1 MHz (No USB)
+RFThings-DKBlue.menu.speed.1.build.f_cpu=1000000L
+
+RFThings-DKBlue.menu.opt.o3=Fastest
+RFThings-DKBlue.menu.opt.o3.build.flags.optimize=-O3
+RFThings-DKBlue.menu.opt.o3.build.flags.ldspecs=
+RFThings-DKBlue.menu.opt.os=Smallest Code
+RFThings-DKBlue.menu.opt.os.build.flags.optimize=-Os
+RFThings-DKBlue.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
+# RFThings-DKBlue.menu.opt.o1=Fast
+# RFThings-DKBlue.menu.opt.o1.build.flags.optimize=-O1
+# RFThings-DKBlue.menu.opt.o1.build.flags.ldspecs=
+# RFThings-DKBlue.menu.opt.o2=Faster
+# RFThings-DKBlue.menu.opt.o2.build.flags.optimize=-O2
+# RFThings-DKBlue.menu.opt.o2.build.flags.ldspecs=
 
 
 
