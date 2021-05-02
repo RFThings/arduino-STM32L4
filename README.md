@@ -13,7 +13,7 @@
 
 ### [RFThings](https://rfthings.com.vn/)
  * [RFThings-DKPlatinum]() (<b>MCU</b>: 1MB Flash, <b>GPS</b>: Ublox CAM-M8Q)
- * [RFThings-DKBlue](https://rfthings.com.vn/product/rt-cp3-bl-rfthings-edition/) (<b>MCU</b>: 256kB Flash, <b>GPS</b>: Quectel L96)
+ * [RFThings-DKBlue](https://rfthings.com.vn/product/dk/) (<b>MCU</b>: 256kB Flash, <b>GPS</b>: Quectel L96)
 
 ## Installing
 
