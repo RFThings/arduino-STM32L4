@@ -12,7 +12,8 @@
  * NUCLEO-L476
 
 ### RFThings
- * RFThings-DK
+ * RFThings-DKPlatinum (<b>MCU</b>: 1MB Flash, <b>GPS</b>: Ublox CAM-M8Q)
+ * RFThings-DKBlue (<b>MCU</b>: 256kB Flash, <b>GPS</b>: Quectel L96)
 
 ## Installing
 
