@@ -22,7 +22,7 @@
  1. [Download and install the Arduino IDE](https://www.arduino.cc/en/Main/Software) (at least version v1.8.13)
  2. Start the Arduino IDE
  3. Go into Preferences
- 4. Add ```https://rfthings.com.vn/wp-content/uploads/2021/05/package_rfthings-stm32l4_index.json``` as an "Additional Board Manager URL"
+ 4. Add ```https://rfthings.com.vn/wp-content/uploads/package_rfthings-stm32l4_index.json``` as an "Additional Board Manager URL"
  5. Open the Boards Manager from the Tools -> Board menu and install "STM32L4 Boards (RFThings) by RFThings"
  6. Select your STM32L4 board from the Tools -> Board menu
 
