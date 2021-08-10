@@ -176,6 +176,8 @@ static const uint8_t BUTTON = PIN_BUTTON;
 #define LS_HALL_EN 5
 #define LS_HALL_ADC 36
 
+#define SD_ON_OFF 44
+
 /*
  * Serial interfaces
  */
