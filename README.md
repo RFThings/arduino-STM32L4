@@ -2,6 +2,20 @@
 
 ## Supported boards
 
+### [RFThings](https://rfthings.com.vn/)
+ * [RFThings-DKPlatinum](https://rfthings.com.vn/product/dk/)
+     * <b>MCU</b>: 1MB Flash
+     * <b>GPS</b>: Ublox CAM-M8Q
+ * [RFThings-DKBlue](https://rfthings.com.vn/product/dk/)
+     * <b>MCU</b>: 256kB Flash
+     * <b>GPS</b>: Quectel L96
+ * [RFThings-DKAIoT]()
+     * <b>MCU</b>: 1MB Flash
+     * <b>GPS</b>: Ublox CAM-M8Q
+     * <b>MicroSD</b>
+     * <b>Sensors</b>: ICM-20948, SGP30-2.5K, SPH0690LM4H-1
+     * <b>Optional sensors</b>: BME280, LSM303, ATECC608, HP203B, LTR-303, KXTJ3, KX023
+
 ### Tlera Corp
  * [Dragonfly-STM32L476RE](https://www.tindie.com/products/TleraCorp/dragonfly-stm32l476-development-board)
  * [Butterfly-STM32L433CC](https://www.tindie.com/products/TleraCorp/butterfly-stm32l433-development-board)
@@ -11,18 +25,17 @@
  * NUCLEO-L432
  * NUCLEO-L476
 
-### [RFThings](https://rfthings.com.vn/)
- * [RFThings-DKPlatinum]() (<b>MCU</b>: 1MB Flash, <b>GPS</b>: Ublox CAM-M8Q)
- * [RFThings-DKBlue](https://rfthings.com.vn/product/dk/) (<b>MCU</b>: 256kB Flash, <b>GPS</b>: Quectel L96)
-
 ## Installing
 
 ### Board Manager
 
  1. [Download and install the Arduino IDE](https://www.arduino.cc/en/Main/Software) (at least version v1.8.13)
  2. Start the Arduino IDE
- 3. Go into Preferences
- 4. Add ```https://rfthings.com.vn/wp-content/uploads/package_rfthings-stm32l4_index.json``` as an "Additional Board Manager URL"
+ 3. Go to Preferences
+ 4. Copy & Add the following JSON URL to your "Additional Board Manager URL"
+ ```
+ https://rfthings.com.vn/wp-content/uploads/package_rfthings-stm32l4_index.json
+ ```
  5. Open the Boards Manager from the Tools -> Board menu and install "STM32L4 Boards (RFThings) by RFThings"
  6. Select your STM32L4 board from the Tools -> Board menu
 
@@ -30,7 +43,7 @@
 
 ##### Linux
 
- 1. Go to ~/.arduino15/packages/lacunaspace/hardware/stm32l4/```<VERSION>```/drivers/linux/
+ 1. Go to ~/.arduino15/packages/rfthings-stm32l4/hardware/stm32l4/```<VERSION>```/drivers/linux/
  2. sudo cp *.rules /etc/udev/rules.d
  3. reboot
 
@@ -49,7 +62,7 @@
 
 ###### USB Serial driver setup for Tlera Corp boards (Window XP / Windows 7 only)
 
- 1. Go to ~/AppData/Local/Arduino15/packages/lacunaspace/hardware/stm32l4/```<VERSION>```/drivers/windows
+ 1. Go to ~/AppData/Local/Arduino15/packages/rfthings-stm32l4/hardware/stm32l4/```<VERSION>```/drivers/windows
  2. Right-click on ```dpinst_x86.exe``` (32 bit Windows) or ```dpinst_amd64.exe``` (64 bit Windows) and select ```Run as administrator```
  3. Click on ```Install this driver software anyway``` at the ```Windows Security``` popup as the driver is unsigned
 
