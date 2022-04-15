@@ -7,9 +7,12 @@ menu.opt=Optimize
 
 
 
+# ---------------------------------------
 # RFThings Design KIT Platinum
 # ---------------------------------------
 RFThings-DKPlatinum.name=RFThings-DKPlatinum
+RFThings-DKPlatinum.vid.0=0x1209
+RFThings-DKPlatinum.pid.0=0x6200
 
 RFThings-DKPlatinum.upload.tool=stm32l4_dfu
 RFThings-DKPlatinum.upload.protocol=dfu
@@ -24,7 +27,7 @@ RFThings-DKPlatinum.build.board=STM32L4_DK
 RFThings-DKPlatinum.build.arch=STM32L4
 RFThings-DKPlatinum.build.core=stm32l4
 RFThings-DKPlatinum.build.vid=0x1209
-RFThings-DKPlatinum.build.pid=0x6667
+RFThings-DKPlatinum.build.pid=0x6200
 RFThings-DKPlatinum.build.did=0xffff
 RFThings-DKPlatinum.build.usb_manufacturer="RFThings"
 RFThings-DKPlatinum.build.usb_product="DK Platinum"
@@ -103,9 +106,12 @@ RFThings-DKPlatinum.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
 
 
 
+# ---------------------------------------
 # RFThings Design KIT Blue
 # ---------------------------------------
 RFThings-DKBlue.name=RFThings-DKBlue
+RFThings-DKBlue.vid.0=0x1209
+RFThings-DKBlue.pid.0=0x6201
 
 RFThings-DKBlue.upload.tool=stm32l4_dfu
 RFThings-DKBlue.upload.protocol=dfu
@@ -120,7 +126,7 @@ RFThings-DKBlue.build.board=STM32L4_DK
 RFThings-DKBlue.build.arch=STM32L4
 RFThings-DKBlue.build.core=stm32l4
 RFThings-DKBlue.build.vid=0x1209
-RFThings-DKBlue.build.pid=0x6667
+RFThings-DKBlue.build.pid=0x6201
 RFThings-DKBlue.build.did=0xffff
 RFThings-DKBlue.build.usb_manufacturer="RFThings"
 RFThings-DKBlue.build.usb_product="DK Blue"
@@ -199,9 +205,12 @@ RFThings-DKBlue.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
 
 
 
+# ---------------------------------------
 # RFThings DK-AIoT
 # ---------------------------------------
 RFThings-DKAIoT.name=RFThings-DKAIoT
+RFThings-DKAIoT.vid.0=0x1209
+RFThings-DKAIoT.pid.0=0x6202
 
 RFThings-DKAIoT.upload.tool=stm32l4_dfu
 RFThings-DKAIoT.upload.protocol=dfu
@@ -216,7 +225,7 @@ RFThings-DKAIoT.build.board=STM32L4_DK
 RFThings-DKAIoT.build.arch=STM32L4
 RFThings-DKAIoT.build.core=stm32l4
 RFThings-DKAIoT.build.vid=0x1209
-RFThings-DKAIoT.build.pid=0x6667
+RFThings-DKAIoT.build.pid=0x6202
 RFThings-DKAIoT.build.did=0xffff
 RFThings-DKAIoT.build.usb_manufacturer="RFThings"
 RFThings-DKAIoT.build.usb_product="DKAIoT"
@@ -296,9 +305,82 @@ RFThings-DKAIoT.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
 
 
 
-# RFThings Design KIT (Dummy)
 # ---------------------------------------
-dummy.name=RFThings Design KIT
-dummy.hide=
-dummy.vid.0=0x1209
-dummy.pid.0=0x6667
+# RFThings Generic STM32L496RG
+# ---------------------------------------
+Generic.name=Generic STM32L496RG
+Generic.vid.0=0x1209
+Generic.pid.0=0x62f0
+
+Generic.upload.tool=stm32l4_dfu
+Generic.upload.protocol=dfu
+Generic.upload.maximum_size=1032192
+Generic.upload.use_1200bps_touch=true
+Generic.upload.wait_for_upload_port=false
+Generic.upload.native_usb=false
+
+Generic.build.mcu=cortex-m4
+Generic.build.f_cpu=80000000L
+Generic.build.board=Generic_STM32L496RG
+Generic.build.arch=STM32L4
+Generic.build.core=stm32l4
+Generic.build.vid=0x1209
+Generic.build.pid=0x62f0
+Generic.build.did=0xffff
+Generic.build.usb_manufacturer="RFThings"
+Generic.build.usb_product="Generic STM32L496RG"
+Generic.build.extra_flags=-DSTM32L496xx -D__FPU_PRESENT=1 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mabi=aapcs -mslow-flash-data -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags}
+Generic.build.ldscript=linker_scripts/STM32L496RG_FLASH.ld
+Generic.build.openocdscript=openocd_scripts/stm32l496rg.cfg
+Generic.build.variant=RFThings-Generic
+Generic.build.variant_system_libs="-L{runtime.platform.path}/system/STM32L4xx/Lib" "-L{runtime.platform.path}/system/CMSIS/Lib" -lstm32l496 -larm_cortexM4lf_math
+Generic.build.variant_system_include="-I{runtime.platform.path}/system/CMSIS/Include" "-I{runtime.platform.path}/system/CMSIS/Device/ST/STM32L4xx/Include" "-I{runtime.platform.path}/system/STM32L4xx/Include" 
+
+Generic.menu.usb.cdc=Serial
+Generic.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
+Generic.menu.usb.none=No USB
+Generic.menu.usb.none.build.usb_type=USB_TYPE_NONE
+
+Generic.build.dosfs_sdcard=0
+Generic.build.dosfs_sflash=0
+
+Generic.menu.speed.80=80 MHz
+Generic.menu.speed.80.build.f_cpu=80000000L
+Generic.menu.speed.72=72 MHz
+Generic.menu.speed.72.build.f_cpu=72000000L
+Generic.menu.speed.64=64 MHz
+Generic.menu.speed.64.build.f_cpu=64000000L
+Generic.menu.speed.48=48 MHz
+Generic.menu.speed.48.build.f_cpu=48000000L
+Generic.menu.speed.32=32 MHz
+Generic.menu.speed.32.build.f_cpu=32000000L
+Generic.menu.speed.24=24 MHz
+Generic.menu.speed.24.build.f_cpu=24000000L
+Generic.menu.speed.16=16 MHz
+Generic.menu.speed.16.build.f_cpu=16000000L
+Generic.menu.speed.8=8 MHz (No USB)
+Generic.menu.speed.8.build.f_cpu=8000000L
+Generic.menu.speed.4=4 MHz (No USB)
+Generic.menu.speed.4.build.f_cpu=4000000L
+Generic.menu.speed.2=2 MHz (No USB)
+Generic.menu.speed.2.build.f_cpu=2000000L
+Generic.menu.speed.1=1 MHz (No USB)
+Generic.menu.speed.1.build.f_cpu=1000000L
+
+Generic.menu.opt.os=Smallest Code
+Generic.menu.opt.os.build.flags.optimize=-Os
+Generic.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
+Generic.menu.opt.o3=Fastest
+Generic.menu.opt.o3.build.flags.optimize=-O3
+Generic.menu.opt.o3.build.flags.ldspecs=
+
+Generic.menu.region_flags.EU868=Europe 868
+Generic.menu.region_flags.EU868.build.region=R_EU868
+Generic.menu.region_flags.US915=US 915
+Generic.menu.region_flags.US915.build.region=R_US915
+Generic.menu.region_flags.AU915=AU 915
+Generic.menu.region_flags.AU915.build.region=R_AU915
+Generic.menu.region_flags.AS923=Asia AS923
+Generic.menu.region_flags.AS923.build.region=R_AS923
+Generic.menu.region_flags.IN865=India 865
+Generic.menu.region_flags.IN865.build.region=R_IN865
