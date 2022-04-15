@@ -15,15 +15,8 @@
      * <b>MicroSD</b>
      * <b>Sensors</b>: ICM-20948, SGP30-2.5K, SPH0690LM4H-1
      * <b>Optional sensors</b>: BME280, LSM303, ATECC608, HP203B, LTR-303, KXTJ3, KX023
-
-### Tlera Corp
- * [Dragonfly-STM32L476RE](https://www.tindie.com/products/TleraCorp/dragonfly-stm32l476-development-board)
- * [Butterfly-STM32L433CC](https://www.tindie.com/products/TleraCorp/butterfly-stm32l433-development-board)
- * [Ladybug-STM32L432KC](https://www.tindie.com/products/TleraCorp/ladybug-stm32l432-development-board)
-
-### STMicroelectronics
- * NUCLEO-L432
- * NUCLEO-L476
+ * [Generic STM32L496RG]()
+     * <b>MCU</b>: STM32L496RG (1MB Flash)
 
 ## Installing
 
@@ -33,9 +26,9 @@
  2. Start the Arduino IDE
  3. Go to Preferences
  4. Copy & Add the following JSON URL to your "Additional Board Manager URL"
- ```
- https://rfthings.com.vn/wp-content/uploads/package_rfthings-stm32l4_index.json
- ```
+```
+https://rfthings.github.io/ArduinoBoardManagerJSON/package_rfthings-stm32l4_index.json
+``` 
  5. Open the Boards Manager from the Tools -> Board menu and install "STM32L4 Boards (RFThings) by RFThings"
  6. Select your STM32L4 board from the Tools -> Board menu
 
