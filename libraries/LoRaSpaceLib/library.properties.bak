@@ -1,0 +1,17 @@
+name=LoRaSpaceLib
+version=1.0.0
+author=RFThings
+maintainer=mtnguyen
+sentence=A library jointly developped by RFThings and UCA to target the LoRa from Space.
+paragraph=Compatible with Semtech SX1262, LR11XX devices
+category=Communication
+url=https://github.com/FabienFerrero/UCA_AIOT
+architectures=*
+includes=rfthings_sx126x.h
+
+# Use a library archive
+precompiled=true
+ldflags=-lLoRaSpaceLib
+
+# Create the library archive
+# dot_a_linkage=true
