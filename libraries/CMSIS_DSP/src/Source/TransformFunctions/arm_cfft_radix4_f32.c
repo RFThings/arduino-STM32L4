@@ -3,13 +3,13 @@
  * Title:        arm_cfft_radix4_f32.c
  * Description:  Radix-4 Decimation in Frequency CFFT & CIFFT Floating point processing function
  *
- * $Date:        18. March 2019
- * $Revision:    V1.6.0
+ * $Date:        23 April 2021
+ * $Revision:    V1.9.0
  *
- * Target Processor: Cortex-M cores
+ * Target Processor: Cortex-M and Cortex-A cores
  * -------------------------------------------------------------------- */
 /*
- * Copyright (C) 2010-2019 ARM Limited or its affiliates. All rights reserved.
+ * Copyright (C) 2010-2021 ARM Limited or its affiliates. All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -26,7 +26,7 @@
  * limitations under the License.
  */
 
-#include "arm_math.h"
+#include "dsp/transform_functions.h"
 
 extern void arm_bitreversal_f32(
         float32_t * pSrc,
@@ -48,21 +48,19 @@ void arm_radix4_butterfly_inverse_f32(
         float32_t onebyfftLen);
 
 
-/**
-  @ingroup groupTransforms
- */
+
 
 /**
-  @addtogroup ComplexFFT
+  @addtogroup ComplexFFTDeprecated
   @{
  */
+
 
 /**
   @brief         Processing function for the floating-point Radix-4 CFFT/CIFFT.
   @deprecated    Do not use this function. It has been superseded by \ref arm_cfft_f32 and will be removed in the future.
   @param[in]     S    points to an instance of the floating-point Radix-4 CFFT/CIFFT structure
   @param[in,out] pSrc points to the complex data buffer of size <code>2*fftLen</code>. Processing occurs in-place
-  @return        none
  */
 
 void arm_cfft_radix4_f32(
@@ -89,7 +87,7 @@ void arm_cfft_radix4_f32(
 }
 
 /**
-  @} end of ComplexFFT group
+  @} end of ComplexFFTDeprecated group
  */
 
 /* ----------------------------------------------------------------------

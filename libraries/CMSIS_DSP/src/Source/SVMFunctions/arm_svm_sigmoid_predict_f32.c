@@ -3,11 +3,13 @@
  * Title:        arm_svm_sigmoid_predict_f32.c
  * Description:  SVM Sigmoid Classifier
  *
+ * $Date:        23 April 2021
+ * $Revision:    V1.9.0
  *
  * Target Processor: Cortex-M and Cortex-A cores
  * -------------------------------------------------------------------- */
 /*
- * Copyright (C) 2010-2019 ARM Limited or its affiliates. All rights reserved.
+ * Copyright (C) 2010-2021 ARM Limited or its affiliates. All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -24,12 +26,12 @@
  * limitations under the License.
  */
 
-#include "arm_math.h"
+#include "dsp/svm_functions.h"
 #include <limits.h>
 #include <math.h>
 
 /**
- * @addtogroup groupSVM
+ * @addtogroup sigmoidsvm
  * @{
  */
 
@@ -40,7 +42,6 @@
  * @param[in]    S        Pointer to an instance of the rbf SVM structure.
  * @param[in]    in       Pointer to input vector
  * @param[out]   pResult  Decision value
- * @return none.
  *
  */
 
@@ -481,5 +482,5 @@ void arm_svm_sigmoid_predict_f32(
 #endif /* defined(ARM_MATH_MVEF) && !defined(ARM_MATH_AUTOVECTORIZE) */
 
 /**
- * @} end of groupSVM group
+ * @} end of sigmoidsvm group
  */

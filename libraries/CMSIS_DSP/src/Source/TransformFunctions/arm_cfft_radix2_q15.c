@@ -3,13 +3,13 @@
  * Title:        arm_cfft_radix2_q15.c
  * Description:  Radix-2 Decimation in Frequency CFFT & CIFFT Fixed point processing function
  *
- * $Date:        18. March 2019
- * $Revision:    V1.6.0
+ * $Date:        23 April 2021
+ * $Revision:    V1.9.0
  *
- * Target Processor: Cortex-M cores
+ * Target Processor: Cortex-M and Cortex-A cores
  * -------------------------------------------------------------------- */
 /*
- * Copyright (C) 2010-2019 ARM Limited or its affiliates. All rights reserved.
+ * Copyright (C) 2010-2021 ARM Limited or its affiliates. All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -26,7 +26,7 @@
  * limitations under the License.
  */
 
-#include "arm_math.h"
+#include "dsp/transform_functions.h"
 
 void arm_radix2_butterfly_q15(
         q15_t * pSrc,
@@ -46,12 +46,9 @@ void arm_bitreversal_q15(
         uint16_t bitRevFactor,
   const uint16_t * pBitRevTab);
 
-/**
-  @ingroup groupTransforms
- */
 
 /**
-  @addtogroup ComplexFFT
+  @addtogroup ComplexFFTDeprecated
   @{
  */
 
@@ -60,7 +57,6 @@ void arm_bitreversal_q15(
   @deprecated    Do not use this function. It has been superseded by \ref arm_cfft_q15 and will be removed in the future.
   @param[in]     S    points to an instance of the fixed-point CFFT/CIFFT structure
   @param[in,out] pSrc points to the complex data buffer of size <code>2*fftLen</code>. Processing occurs in-place
-  @return        none
  */
 
 void arm_cfft_radix2_q15(
@@ -81,7 +77,7 @@ void arm_cfft_radix2_q15(
 }
 
 /**
-  @} end of ComplexFFT group
+  @} end of ComplexFFTDeprecated group
  */
 
 void arm_radix2_butterfly_q15(
