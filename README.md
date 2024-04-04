@@ -1,20 +1,11 @@
-# Arduino Core for STM32L4 based boards
+# Arduino Core for STM32L4 based boards with CMSIS DSP library
 
 ## Supported boards
 
 ### [RFThings](https://rfthings.com.vn/)
- * [RFThings-DKPlatinum](https://rfthings.com.vn/product/dk/)
+ * [RFThings-DKAIoT UCA EDITION]()
      * <b>MCU</b>: 1MB Flash
-     * <b>GPS</b>: Ublox CAM-M8Q
- * [RFThings-DKBlue](https://rfthings.com.vn/product/dk/)
-     * <b>MCU</b>: 256kB Flash
-     * <b>GPS</b>: Quectel L96
- * [RFThings-DKAIoT]()
-     * <b>MCU</b>: 1MB Flash
-     * <b>GPS</b>: Ublox CAM-M8Q
      * <b>MicroSD</b>
-     * <b>Sensors</b>: ICM-20948, SGP30-2.5K, SPH0690LM4H-1
-     * <b>Optional sensors</b>: BME280, LSM303, ATECC608, HP203B, LTR-303, KXTJ3, KX023
  * [Generic STM32L496RG]()
      * <b>MCU</b>: STM32L496RG (1MB Flash)
 
@@ -27,7 +18,7 @@
  3. Go to Preferences
  4. Copy & Add the following JSON URL to your "Additional Board Manager URL"
 ```
-https://rfthings.github.io/ArduinoBoardManagerJSON/package_rfthings-stm32l4_index.json
+https://github.com/hugofnm/rfthings-stm32l4/releases/latest/download/package_stm32_leat_arduino.json
 ``` 
  5. Open the Boards Manager from the Tools -> Board menu and install "STM32L4 Boards (RFThings) by RFThings"
  6. Select your STM32L4 board from the Tools -> Board menu
